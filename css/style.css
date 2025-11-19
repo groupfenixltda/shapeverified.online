@@ -1,0 +1,403 @@
+/* Estilo para o iframe do mapa */
+/* Adiciona rolagem suave ao clicar nos links âncora */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Variáveis de Cores e Fontes (CSS Custom Properties) --- */
+:root {
+    --azul-principal: #005A9C;
+    --laranja-destaque: #F5A623;
+    --cor-texto-principal: #374151;
+    --cor-texto-secundario: #6B7280;
+    --cor-fundo: #F9FAFB;
+    --cor-branco: #FFFFFF;
+    --cor-cinza-escuro: #1F2937;
+    --cor-cinza-claro: #E5E7EB;
+    --sombra-padrao: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --fonte-principal: 'Inter', sans-serif;
+}
+
+/* --- Reset Básico e Estilos Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Mantém a imagem fixa durante a rolagem */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --- Classe Utilitária --- */
+.hidden {
+    display: none !important;
+}
+
+/* --- Layout do Container --- */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* 24px */
+    padding-right: 1.5rem; /* 24px */
+}
+
+/* --- Componente de Botão --- */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.25rem; /* 12px 20px */
+    border-radius: 9999px; /* "rounded-full" */
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--laranja-destaque);
+    color: var(--cor-branco);
+}
+
+.btn-primary:hover {
+    background-color: #e0981f; /* Um pouco mais escuro */
+}
+
+/* --- Cabeçalho e Navegação --- */
+.main-header {
+    background-color: var(--cor-branco);
+    box-shadow: var(--sombra-padrao);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.logo {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 700;
+    color: var(--azul-principal);
+}
+
+.nav-links-desktop {
+    display: none; /* Oculto por padrão, visível em telas maiores */
+    gap: 1.5rem; /* 24px */
+}
+
+.nav-link {
+    color: var(--cor-texto-principal);
+}
+
+.nav-link:hover {
+    color: var(--azul-principal);
+}
+
+.btn-contact-desktop {
+    display: none; /* Oculto por padrão */
+}
+
+.menu-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    background-color: var(--cor-branco);
+    box-shadow: var(--sombra-padrao);
+}
+
+.nav-link-mobile {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--cor-texto-principal);
+}
+
+.nav-link-mobile:hover {
+    background-color: #f3f4f6; /* gray-100 */
+}
+
+.btn-contact-mobile {
+    display: block;
+    margin: 1rem;
+}
+
+/* --- Conteúdo Principal e Seções --- */
+main.container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+section {
+    margin-bottom: 4rem; /* 64px */
+    scroll-margin-top: 5rem; /* Ajuste para ancoragem */
+}
+
+.section-title {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 700;
+    text-align: center;
+    color: #1f2937; /* gray-800 */
+    margin-bottom: 2rem; /* 32px */
+}
+
+/* --- Seção Hero --- */
+.hero-section {
+    position: relative;
+    background-color: var(--azul-principal);
+    color: var(--cor-branco);
+    border-radius: 0.5rem; /* 8px */
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3rem;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9; /* Ajustado para melhor contraste */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem; /* 20px */
+    margin-bottom: 2rem;
+}
+
+.btn-hero {
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem; /* 18px */
+    font-weight: 700;
+}
+
+/* --- Seção Sobre Nós --- */
+.about-section {
+    background-color: var(--cor-branco);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra-padrao);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-image img {
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra-padrao);
+}
+
+.about-text {
+    font-size: 1.125rem; /* 18px */
+    color: var(--cor-texto-principal);
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+/* --- Seção Pacotes --- */
+.packages-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.package-card {
+    background-color: var(--cor-branco);
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra-padrao);
+    overflow: hidden;
+}
+
+.package-card img {
+    width: 100%;
+    height: 12rem; /* 192px */
+    object-fit: cover;
+}
+
+.package-info {
+    padding: 1.5rem;
+}
+
+.package-info h3 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.package-info p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1rem;
+}
+
+.package-link {
+    color: var(--azul-principal);
+    font-weight: 500;
+}
+
+.package-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Seção Contato --- */
+.contact-section {
+    background-color: var(--cor-branco);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra-padrao);
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    color: var(--azul-principal);
+    margin-bottom: 1rem;
+}
+
+.contact-info address {
+    font-style: normal;
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+}
+
+.contact-info h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+    color: var(--cor-texto-principal);
+    margin-bottom: 0.25rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra-padrao);
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    background-color: var(--cor-cinza-escuro);
+    color: #D1D5DB; /* gray-300 */
+    margin-top: 4rem;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-credit {
+    font-size: 0.875rem; /* 14px */
+    color: #9CA3AF; /* gray-400 */
+    margin-top: 0.5rem;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (min-width: 768px) { /* md breakpoint */
+    .nav-links-desktop, .btn-contact-desktop {
+        display: flex;
+    }
+
+    .menu-toggle-btn, .menu-mobile {
+        display: none;
+    }
+
+    .hero-section {
+        padding: 6rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.75rem; /* 60px */
+    }
+
+    .hero-content p {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .about-content {
+        flex-direction: row;
+    }
+
+    .about-image, .about-text {
+        width: 50%;
+    }
+
+    .packages-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-section {
+        padding: 3rem;
+    }
+
+    .contact-content {
+        flex-direction: row;
+    }
+
+    .contact-info {
+        width: 33.33%;
+    }
+
+    .map-container {
+        width: 66.67%;
+    }
+}

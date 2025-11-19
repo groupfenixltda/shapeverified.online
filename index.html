@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adval Turismo - Sua Agência de Viagens</title>
+
+    <!-- Fonte Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Link para o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- 1. Cabeçalho e Navegação -->
+    <header class="main-header">
+        <nav class="container nav-container">
+            <!-- Logo/Nome da Empresa -->
+            <a href="#" class="logo">
+                Adval Turismo
+            </a>
+
+            <!-- Links de Navegação (Desktop) -->
+            <div class="nav-links-desktop">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#sobre" class="nav-link">Sobre Nós</a>
+                <a href="#pacotes" class="nav-link">Pacotes</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </div>
+
+            <!-- Botão de Contato (Desktop) -->
+            <a href="#contato" class="btn btn-primary btn-contact-desktop">
+                Fale Conosco
+            </a>
+
+            <!-- Botão Hamburger (Mobile) -->
+            <button id="menu-btn" class="menu-toggle-btn">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Menu Mobile (Oculto por padrão) -->
+        <div id="menu-mobile" class="menu-mobile hidden">
+            <a href="#inicio" class="nav-link-mobile">Início</a>
+            <a href="#sobre" class="nav-link-mobile">Sobre Nós</a>
+            <a href="#pacotes" class="nav-link-mobile">Pacotes</a>
+            <a href="#contato" class="nav-link-mobile">Contato</a>
+            <a href="#contato" class="btn btn-primary btn-contact-mobile">
+                Fale Conosco
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. Conteúdo Principal -->
+    <main class="container">
+
+        <!-- Seção Inicial (Hero) -->
+        <section id="inicio" class="hero-section">
+            <img src="/img/img6.png" alt="Banner de viagem" class="hero-background"
+                onerror="this.src='https://placehold.co/1200x600/005A9C/FFFFFF?text=Imagem+N%C3%A3o+Carregada&font=inter'">
+            <div class="hero-content">
+                <h1>Descubra o Mundo</h1>
+                <p>Sua próxima grande aventura começa aqui.</p>
+                <a href="#pacotes" class="btn btn-primary btn-hero">
+                    Ver Pacotes
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section id="sobre" class="about-section">
+            <h2 class="section-title">Sobre a Adval Turismo</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/img/img1.png" alt="Equipe Adval Turismo"
+                        onerror="this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Placeholder&font=inter'">
+                </div>
+                <div class="about-text">
+                    <h1>O cliente satisfeito é a razão da nossa existência.</h1>
+                    <br>
+                    <p>
+                        Adval Viagens e Turismo é uma agência de receptivo local de competência profissional comprovada
+                        no mercado turístico nacional como também no receptivo internacional. Fundada desde 1991, a
+                        Adval Turismo vem se destacando no mercado baiano por ser uma empresa que prima pela lealdade
+                        aos seus parceiros e clientes, também por ter como base a dinâmica de um atendimento
+                        personalizado aliado a alta qualidade de seus serviços prestados oferecendo a cada cliente um
+                        tratamento diferenciado de acordo a sua necessidade.
+                    </p>
+                    <p>
+                        Nossa missão é Obtermos excelência na prestação de serviços de turismo e entretenimento, sendo
+                        os melhores naquilo que nos propusermos a fazer, com foco absoluto em nossas atividades,
+                        garantindo os melhores serviços e inovando tecnologia em serviços e custo beneficia aos nossos
+                        clientes, solidez aos fornecedores, rentabilidade satisfatória e um crescimento a todos os
+                        colaboradores..
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Pacotes -->
+        <section id="pacotes" class="section-padding">
+            <h2 class="section-title">Pacotes Populares</h2>
+            <div class="packages-grid">
+                <!-- Pacote 1 -->
+                <div class="package-card">
+                    <img src="img/img3.png" alt="Praias da Bahia"
+                        onerror="this.src='https://placehold.co/400x300/F5A623/FFFFFF?text=Placeholder&font=inter'">
+                    <div class="package-info">
+                        <h3>Praias da Bahia</h3>
+                        <p>Sol, mar e alegria no litoral mais famoso do Brasil.</p>
+                        <a href="#contato" class="package-link">Saiba Mais</a>
+                    </div>
+                </div>
+                <!-- Pacote 2 -->
+                <div class="package-card">
+                    <img src="/img/img4.png" alt="Europa Clássica"
+                        onerror="this.src='https://placehold.co/400x300/005A9C/FFFFFF?text=Placeholder&font=inter'">
+                    <div class="package-info">
+                        <h3>Europa Clássica</h3>
+                        <p>História e cultura em um roteiro por Paris, Roma e Londres.</p>
+                        <a href="#contato" class="package-link">Saiba Mais</a>
+                    </div>
+                </div>
+                <!-- Pacote 3 -->
+                <div class="package-card">
+                    <img src="/img/img5.png" alt="Aventura na Amazônia"
+                        onerror="this.src='https://placehold.co/400x300/718096/FFFFFF?text=Placeholder&font=inter'">
+                    <div class="package-info">
+                        <h3>Aventura na Amazônia</h3>
+                        <p>Explore a maior floresta tropical do mundo.</p>
+                        <a href="#contato" class="package-link">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato e Localização -->
+        <section id="contato" class="contact-section">
+            <h2 class="section-title">Onde Estamos</h2>
+            <div class="contact-content">
+                <!-- Informações de Endereço -->
+                <div class="contact-info">
+                    <h3>Visite-nos</h3>
+                    <address>
+                        <p>
+                            Av. Santos Dumont, nº 1752<br>
+                            Ed. Empr. Refran - Sala 302
+                        </p>
+                        <p>
+                            Lauro de Freitas, BA - 42700-000
+                        </p>
+                    </address>
+
+                    <h4>Contato</h4>
+                    <p>(71) 3328.0332 | (71) 3329.4834 | (71) 9 8802.1375</p>
+                    <p>receptivo@advalturismo.com.br</p>
+                </div>
+
+                <!-- Iframe do Google Maps -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.36676239169!2d-38.33020968517869!3d-12.88453899091308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71610e19a4a75b7%3A0x8f7f4c0274136f75!2sAv.%20Santos%20Dumont%2C%201752%20-%20Sala%20302%20-%20Centro%2C%20Lauro%20de%20Freitas%20-%20BA%2C%2042702-020%2C%20Brazil!5e0!3m2!1spt-BR!2sus!4v1731860555364!5m2!1spt-BR!2sus"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 3. Rodapé -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Adval Turismo. Todos os direitos reservados.</p>
+            <p class="footer-credit">Feito com ❤️ para sua próxima viagem.</p>
+        </div>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript -->
+    <!-- 'defer' garante que o script só execute após o HTML ser carregado -->
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
